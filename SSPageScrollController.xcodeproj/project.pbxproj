@@ -17,6 +17,15 @@
 		CB56AF7520B7E84F006BDE0F /* SSPageScrollViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CB56AF7320B7E84F006BDE0F /* SSPageScrollViewController.h */; };
 		CB56AF7620B7E84F006BDE0F /* SSPageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56AF7420B7E84F006BDE0F /* SSPageScrollViewController.m */; };
 		CB56AF7720B7E851006BDE0F /* SSPageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56AF7420B7E84F006BDE0F /* SSPageScrollViewController.m */; };
+		CB56AF7C20B7E976006BDE0F /* SSRecognizeGesTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = CB56AF7A20B7E976006BDE0F /* SSRecognizeGesTableView.h */; };
+		CB56AF7D20B7E976006BDE0F /* SSRecognizeGesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56AF7B20B7E976006BDE0F /* SSRecognizeGesTableView.m */; };
+		CB56AF7E20B7E976006BDE0F /* SSRecognizeGesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56AF7B20B7E976006BDE0F /* SSRecognizeGesTableView.m */; };
+		CB56AF8120B7EE54006BDE0F /* SSPageScrollContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = CB56AF7F20B7EE54006BDE0F /* SSPageScrollContentView.h */; };
+		CB56AF8220B7EE54006BDE0F /* SSPageScrollContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56AF8020B7EE54006BDE0F /* SSPageScrollContentView.m */; };
+		CB56AF8320B7EE54006BDE0F /* SSPageScrollContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56AF8020B7EE54006BDE0F /* SSPageScrollContentView.m */; };
+		CB56AF8720B7EF3F006BDE0F /* SSScrollContentControllerDeleagte.h in Headers */ = {isa = PBXBuildFile; fileRef = CB56AF8620B7EF3F006BDE0F /* SSScrollContentControllerDeleagte.h */; };
+		CB56AF8A20B8069E006BDE0F /* TableController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56AF8920B8069E006BDE0F /* TableController.m */; };
+		CB56AF9320B81DA9006BDE0F /* TestScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB56AF9220B81DA9006BDE0F /* TestScrollViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +44,15 @@
 		CB56AF6E20B7E7E3006BDE0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CB56AF7320B7E84F006BDE0F /* SSPageScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSPageScrollViewController.h; sourceTree = "<group>"; };
 		CB56AF7420B7E84F006BDE0F /* SSPageScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSPageScrollViewController.m; sourceTree = "<group>"; };
+		CB56AF7A20B7E976006BDE0F /* SSRecognizeGesTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSRecognizeGesTableView.h; sourceTree = "<group>"; };
+		CB56AF7B20B7E976006BDE0F /* SSRecognizeGesTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSRecognizeGesTableView.m; sourceTree = "<group>"; };
+		CB56AF7F20B7EE54006BDE0F /* SSPageScrollContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSPageScrollContentView.h; sourceTree = "<group>"; };
+		CB56AF8020B7EE54006BDE0F /* SSPageScrollContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSPageScrollContentView.m; sourceTree = "<group>"; };
+		CB56AF8620B7EF3F006BDE0F /* SSScrollContentControllerDeleagte.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSScrollContentControllerDeleagte.h; sourceTree = "<group>"; };
+		CB56AF8820B8069E006BDE0F /* TableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableController.h; sourceTree = "<group>"; };
+		CB56AF8920B8069E006BDE0F /* TableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableController.m; sourceTree = "<group>"; };
+		CB56AF9120B81DA9006BDE0F /* TestScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestScrollViewController.h; sourceTree = "<group>"; };
+		CB56AF9220B81DA9006BDE0F /* TestScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestScrollViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +94,12 @@
 		CB56AF5020B7E7DA006BDE0F /* SSPageScrollController */ = {
 			isa = PBXGroup;
 			children = (
-				CB56AF5120B7E7DA006BDE0F /* SSPageScrollController.h */,
-				CB56AF5220B7E7DA006BDE0F /* Info.plist */,
 				CB56AF7320B7E84F006BDE0F /* SSPageScrollViewController.h */,
 				CB56AF7420B7E84F006BDE0F /* SSPageScrollViewController.m */,
+				CB56AF7920B7E92F006BDE0F /* Core */,
+				CB56AF7820B7E92B006BDE0F /* Private */,
+				CB56AF5120B7E7DA006BDE0F /* SSPageScrollController.h */,
+				CB56AF5220B7E7DA006BDE0F /* Info.plist */,
 			);
 			path = SSPageScrollController;
 			sourceTree = "<group>";
@@ -91,6 +111,10 @@
 				CB56AF6020B7E7E3006BDE0F /* AppDelegate.m */,
 				CB56AF6220B7E7E3006BDE0F /* ViewController.h */,
 				CB56AF6320B7E7E3006BDE0F /* ViewController.m */,
+				CB56AF8820B8069E006BDE0F /* TableController.h */,
+				CB56AF8920B8069E006BDE0F /* TableController.m */,
+				CB56AF9120B81DA9006BDE0F /* TestScrollViewController.h */,
+				CB56AF9220B81DA9006BDE0F /* TestScrollViewController.m */,
 				CB56AF6520B7E7E3006BDE0F /* Main.storyboard */,
 				CB56AF6820B7E7E3006BDE0F /* Assets.xcassets */,
 				CB56AF6A20B7E7E3006BDE0F /* LaunchScreen.storyboard */,
@@ -100,6 +124,25 @@
 			path = ios;
 			sourceTree = "<group>";
 		};
+		CB56AF7820B7E92B006BDE0F /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				CB56AF7A20B7E976006BDE0F /* SSRecognizeGesTableView.h */,
+				CB56AF7B20B7E976006BDE0F /* SSRecognizeGesTableView.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		CB56AF7920B7E92F006BDE0F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CB56AF7F20B7EE54006BDE0F /* SSPageScrollContentView.h */,
+				CB56AF8020B7EE54006BDE0F /* SSPageScrollContentView.m */,
+				CB56AF8620B7EF3F006BDE0F /* SSScrollContentControllerDeleagte.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -107,8 +150,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB56AF7C20B7E976006BDE0F /* SSRecognizeGesTableView.h in Headers */,
 				CB56AF5320B7E7DA006BDE0F /* SSPageScrollController.h in Headers */,
 				CB56AF7520B7E84F006BDE0F /* SSPageScrollViewController.h in Headers */,
+				CB56AF8120B7EE54006BDE0F /* SSPageScrollContentView.h in Headers */,
+				CB56AF8720B7EF3F006BDE0F /* SSScrollContentControllerDeleagte.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB56AF7D20B7E976006BDE0F /* SSRecognizeGesTableView.m in Sources */,
+				CB56AF8220B7EE54006BDE0F /* SSPageScrollContentView.m in Sources */,
 				CB56AF7620B7E84F006BDE0F /* SSPageScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,8 +270,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB56AF7720B7E851006BDE0F /* SSPageScrollViewController.m in Sources */,
+				CB56AF8A20B8069E006BDE0F /* TableController.m in Sources */,
+				CB56AF7E20B7E976006BDE0F /* SSRecognizeGesTableView.m in Sources */,
+				CB56AF9320B81DA9006BDE0F /* TestScrollViewController.m in Sources */,
 				CB56AF6420B7E7E3006BDE0F /* ViewController.m in Sources */,
 				CB56AF6F20B7E7E3006BDE0F /* main.m in Sources */,
+				CB56AF8320B7EE54006BDE0F /* SSPageScrollContentView.m in Sources */,
 				CB56AF6120B7E7E3006BDE0F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -351,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

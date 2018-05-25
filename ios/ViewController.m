@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "SSPageScrollViewController.h"
+#import "TestScrollViewController.h"
 
 @interface ViewController ()
 
@@ -24,6 +26,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (IBAction)clickTest:(id)sender
+{
+//    SSPageScrollViewController *controller = [[SSPageScrollViewController alloc]init];
+    TestScrollViewController *controller = [[TestScrollViewController alloc]init];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+
 
 
 @end
