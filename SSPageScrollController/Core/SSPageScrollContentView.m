@@ -14,6 +14,9 @@ NSString *const kkCollectionCellider = @"kkContentCollectionCellider";
 {
     // 收集控制器
     __weak UICollectionView *_collectionView;
+    // 记录上一次页面
+    NSInteger _lastScrollIndex;
+    
 }
 @end
 
@@ -127,8 +130,8 @@ NSString *const kkCollectionCellider = @"kkContentCollectionCellider";
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     // 停止滑动的时候
-    if ([_delegate respondsToSelector:@selector(scrollViewWillBeginDragging:)]) {
-        [_delegate scrollViewWillBeginDragging:self];
+    if ([_delegate respondsToSelector:@selector(scrollViewDidEndDragging:scrollView:)]) {
+        [_delegate scrollViewDidEndDragging:self scrollView:scrollView];
     }
 }
 
@@ -137,8 +140,9 @@ NSString *const kkCollectionCellider = @"kkContentCollectionCellider";
 {
     NSInteger currentindex = scrollView.contentOffset.x/scrollView.frame.size.width;
     // 页数切换的时候
-    if (_selectIndex != currentindex) {
-        _selectIndex = currentindex;
+    // 引入一个数据避免重复调用
+    if (_lastScrollIndex != currentindex) {
+        _lastScrollIndex = currentindex;
         //
         if ([_delegate respondsToSelector:@selector(scrollView:atIndex:)]) {
             [_delegate scrollView:self atIndex:currentindex];
@@ -219,16 +223,7 @@ NSString *const kkCollectionCellider = @"kkContentCollectionCellider";
 
 
 
-
 @end
-
-
-
-
-
-
-
-
 
 
 

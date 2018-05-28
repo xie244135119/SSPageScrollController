@@ -127,7 +127,6 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat bottomCellOffset = [_scrollMainTableView rectForSection:0].origin.y;
-    NSLog(@" %@ %s %f %f",NSStringFromClass([self class]), __FUNCTION__, bottomCellOffset,scrollView.contentOffset.y);
     if (scrollView.contentOffset.y >= bottomCellOffset) {
         scrollView.contentOffset = CGPointMake(0, bottomCellOffset);
         if (_viewCanScroll) {
@@ -147,19 +146,19 @@
 // 开始滑动的时候
 - (void)scrollViewWillBeginDragging:(SSPageScrollContentView *)scrollView
 {
-    NSLog(@" scrollViewWillBeginDragging ");
+//    NSLog(@" scrollViewWillBeginDragging ");
 }
 
 // view 停止滑动的时候
-- (void)scrollViewDidEndDragging:(SSPageScrollContentView *)scrollView
+- (void)scrollViewDidEndDragging:(SSPageScrollContentView *)scrollView scrollView:(UIScrollView *)scrollView
 {
-    NSLog(@" scrollViewDidEndDragging ");
+//    NSLog(@" scrollViewDidEndDragging ");
 }
 
 // 滚动到某一页的时候
 - (void)scrollView:(SSPageScrollContentView *)scrollView atIndex:(NSInteger)index
 {
-    NSLog(@" scrollView:atIndex: ");
+//    NSLog(@" scrollView:atIndex: ");
 }
 
 // 内部子视图已经滑到顶部

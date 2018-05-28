@@ -50,9 +50,11 @@
 // view 开始滑动的时候
 - (void)scrollViewWillBeginDragging:(SSPageScrollContentView *)scrollView;
 // view 停止滑动的时候
-- (void)scrollViewDidEndDragging:(SSPageScrollContentView *)scrollView;
+- (void)scrollViewDidEndDragging:(SSPageScrollContentView *)scrollView
+                      scrollView:(UIScrollView *)scrollView;
 // 滚动到某一页的时候
-- (void)scrollView:(SSPageScrollContentView *)scrollView atIndex:(NSInteger)index;
+- (void)scrollView:(SSPageScrollContentView *)scrollView
+           atIndex:(NSInteger)index;
 
 // 内部子视图已经滑到顶部
 - (void)scrollView:(SSPageScrollContentView *)scrollView subViewsScrollToTop:(BOOL)top;

@@ -17,3 +17,13 @@ FOUNDATION_EXPORT const unsigned char SSPageScrollControllerVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <SSPageScrollController/PublicHeader.h>
 
 
+ #import <SSPageScrollController/SSPageScrollViewController.h>
+ #import <SSPageScrollController/SSScrollContentControllerDeleagte.h>
+ #import <SSPageScrollController/SSPageScrollContentView.h>
+
+
+
+
+
+
+
