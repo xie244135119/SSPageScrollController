@@ -138,14 +138,15 @@ NSString *const kkCollectionCellider = @"kkContentCollectionCellider";
 // 滚动的时候
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSInteger currentindex = scrollView.contentOffset.x/scrollView.frame.size.width;
+    CGFloat currentindex = (CGFloat)scrollView.contentOffset.x/scrollView.frame.size.width;
+    NSInteger page = round(currentindex);
     // 页数切换的时候
     // 引入一个数据避免重复调用
-    if (_lastScrollIndex != currentindex) {
-        _lastScrollIndex = currentindex;
+    if (_lastScrollIndex != page) {
+        _lastScrollIndex = page;
         //
         if ([_delegate respondsToSelector:@selector(scrollView:atIndex:)]) {
-            [_delegate scrollView:self atIndex:currentindex];
+            [_delegate scrollView:self atIndex:page];
         }
     }
 }
