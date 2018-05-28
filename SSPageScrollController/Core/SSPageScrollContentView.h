@@ -51,7 +51,7 @@
 - (void)scrollViewWillBeginDragging:(SSPageScrollContentView *)scrollView;
 // view 停止滑动的时候
 - (void)scrollViewDidEndDragging:(SSPageScrollContentView *)scrollView
-                      scrollView:(UIScrollView *)scrollView;
+                      scrollView:(UIScrollView *)sender;
 // 滚动到某一页的时候
 - (void)scrollView:(SSPageScrollContentView *)scrollView
            atIndex:(NSInteger)index;

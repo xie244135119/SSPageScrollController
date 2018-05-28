@@ -150,7 +150,8 @@
 }
 
 // view 停止滑动的时候
-- (void)scrollViewDidEndDragging:(SSPageScrollContentView *)scrollView scrollView:(UIScrollView *)scrollView
+- (void)scrollViewDidEndDragging:(SSPageScrollContentView *)scrollView
+                      scrollView:(UIScrollView *)sender
 {
 //    NSLog(@" scrollViewDidEndDragging ");
 }
