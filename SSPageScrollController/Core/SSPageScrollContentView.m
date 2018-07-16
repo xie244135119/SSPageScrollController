@@ -99,22 +99,18 @@ NSString *const kkCollectionCellider = @"kkContentCollectionCellider";
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kkCollectionCellider forIndexPath:indexPath];
-
+    
     // 添加子视图
     [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     UIViewController *controller = _contentControllers[indexPath.row];
     controller.view.frame = cell.contentView.bounds;
     [cell.contentView addSubview:controller.view];
     
-    return cell;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
-    for (UIViewController<SSScrollContentControllerDeleagte> *controller in _contentControllers) {
-        //            // 添加对子控制器的偏移量监听
+    if (![controller observationInfo]) {
         [controller addObserver:self forKeyPath:@"contentScrollView.contentOffset" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:(__bridge void * _Nullable)(controller)];
     }
     
+    return cell;
 }
 
 // collectionView begin drag
