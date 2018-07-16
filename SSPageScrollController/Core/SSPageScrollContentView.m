@@ -25,7 +25,9 @@ NSString *const kkCollectionCellider = @"kkContentCollectionCellider";
 - (void)dealloc
 {
     for (UIViewController<SSScrollContentControllerDeleagte> *controller in _contentControllers) {
-        [controller removeObserver:self forKeyPath:@"contentScrollView.contentOffset"];
+        if ([controller observationInfo]) {
+            [controller removeObserver:self forKeyPath:@"contentScrollView.contentOffset"];
+        }
     }
 }
 
