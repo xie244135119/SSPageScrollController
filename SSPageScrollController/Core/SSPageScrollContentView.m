@@ -13,7 +13,7 @@ NSString *const kkCollectionCellider = @"kkContentCollectionCellider";
 @interface SSPageScrollContentView()<UICollectionViewDelegate, UICollectionViewDataSource>
 {
     // 收集控制器
-    __weak UICollectionView *_collectionView;
+//    __weak UICollectionView *_collectionView;
     // 记录上一次页面
     NSInteger _lastScrollIndex;
     

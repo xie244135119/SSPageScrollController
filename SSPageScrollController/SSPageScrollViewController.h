@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "SSScrollContentControllerDeleagte.h"
+#import "SSPageScrollContentView.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface SSPageScrollViewController : UIViewController
+
+// 滑动内部视图
+@property(nonatomic, strong, readonly) SSPageScrollContentView *scrollContentView;
 
 
 
@@ -39,6 +45,8 @@
 
 @end
 
+
+NS_ASSUME_NONNULL_END
 
 
 

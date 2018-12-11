@@ -21,6 +21,8 @@
 @property(nonatomic, weak) id<SSPageScrollContentDelegate> delegate;
 // 内部视图
 @property(nonatomic, strong, readonly) NSArray<UIViewController<SSScrollContentControllerDeleagte> *> *contentControllers;
+// collectionView
+@property(nonatomic, strong, readonly) UICollectionView *collectionView;
 
 /**
  选中的视图的索引值  默认为0

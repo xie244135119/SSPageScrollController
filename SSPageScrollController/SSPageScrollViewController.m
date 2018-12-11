@@ -13,13 +13,13 @@
 @interface SSPageScrollViewController ()<UITableViewDataSource, UITableViewDelegate, SSPageScrollContentDelegate>
 // 是否允许滑动
 @property(nonatomic) BOOL viewCanScroll;
-// 滑动视图
-@property(nonatomic, weak) SSPageScrollContentView *scrolContentView;
+
 // 承载主视图的table
 @property(nonatomic, weak) UITableView *scrollMainTableView;
 @end
 
 @implementation SSPageScrollViewController
+@synthesize scrollContentView = _scrollContentView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -93,7 +93,9 @@
         SSPageScrollContentView *contentView = [[SSPageScrollContentView alloc]initWithFrame:frame contentControllers:[self contentScrollers] rootController:self];
         contentView.delegate = self;
         [cell.contentView addSubview:contentView];
-        _scrolContentView = contentView;
+        _scrollContentView = contentView;
+        // 手势优先级 collectView的优先级 > tableView的优先级
+        [tableView.panGestureRecognizer requireGestureRecognizerToFail:contentView.collectionView.panGestureRecognizer];
     }
     
     return cell;
@@ -131,7 +133,7 @@
         scrollView.contentOffset = CGPointMake(0, bottomCellOffset);
         if (_viewCanScroll) {
             _viewCanScroll = NO;
-            _scrolContentView.canScroll = YES;
+            _scrollContentView.canScroll = YES;
         }
     }else{
         if (!_viewCanScroll) {//子视图没到顶部
@@ -166,7 +168,7 @@
 - (void)scrollView:(SSPageScrollContentView *)scrollView subViewsScrollToTop:(BOOL)top
 {
     _viewCanScroll = YES;
-    _scrolContentView.canScroll = NO;
+    _scrollContentView.canScroll = NO;
 }
 
 
